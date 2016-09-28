@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#connect proxychains sshfs root@netcat.us:/root/redcloud  /root/blackcat
 
 from project import views
 from project import models
