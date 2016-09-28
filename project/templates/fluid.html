@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+    </style>
+    <link href="../static/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../static/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../static/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../static/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../static/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">{{ project.name }}</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+       
+          <style>
+/* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+@import url("http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+*, *:before, *:after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+html, body {
+height: 100%;
+}
+body {
+font: 14px/1 'Open Sans', sans-serif;
+color: #555;
+background: #eee;
+}
+h1 {
+padding: 50px 0;
+font-weight: 400;
+text-align: center;
+}
+p {
+margin: 0 0 20px;
+line-height: 1.5;
+}
+main {
+min-width: 320px;
+max-width: 800px;
+padding: 50px;
+margin: 0 auto;
+background: #fff;
+}
+section {
+display: none;
+padding: 20px 0 0;
+border-top: 1px solid #ddd;
+}
+input {
+display: none;
+}
+input.test{
+display: block;
+}
+label {
+display: inline-block;
+margin: 0 0 -1px;
+padding: 15px 25px;
+font-weight: 600;
+text-align: center;
+color: #bbb;
+border: 1px solid transparent;
+}
+label:before {
+font-family: fontawesome;
+font-weight: normal;
+margin-right: 10px;
+}
+label[for*='1']:before {
+content: '\f05b';
+}
+label[for*='2']:before {
+content: '\f06e';
+}
+label[for*='3']:before {
+content: '\f07c';
+}
+label[for*='4']:before {
+content: '\f1d8';
+}
+label[for*='5']:before {
+content: '\f0e8';
+}
+label[for*='6']:before {
+content: '\f188';
+}
+label[for*='7']:before {
+content: '\f090';
+}
+label[for*='8']:before {
+content: '\f09d';
+}
+label[for*='9']:before {
+content: '\f124';
+}
+label:hover {
+color: #888;
+cursor: pointer;
+}
+input:checked + label {
+color: #555;
+border: 1px solid #ddd;
+border-top: 2px solid orange;
+border-bottom: 1px solid #fff;
+}
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab5:checked ~ #content5,
+#tab6:checked ~ #content6,
+#tab6:checked ~ #content6,
+#tab7:checked ~ #content7,
+#tab8:checked ~ #content8,
+#tab9:checked ~ #content9
+{
+display: block;
+}
+@media screen and (max-width: 650px) {
+label {
+font-size: 0;
+}
+label:before {
+margin: 0;
+font-size: 18px;
+}
+}
+@media screen and (max-width: 400px) {
+label {
+padding: 15px;
+}
+}
+</style>
+</head>
+<body>
+<main>
+<input id="tab1" type="radio" name="tabs" checked>
+<label for="tab1">Target</label>
+<input id="tab2" type="radio" name="tabs">
+<label for="tab2">Ports</label>
+<input id="tab3" type="radio" name="tabs">
+<label for="tab3">Directory</label>
+<input id="tab4" type="radio" name="tabs">
+<label for="tab4">Notes</label>
+<input id="tab5" type="radio" name="tabs">
+<label for="tab5">Network</label>
+<input id="tab6" type="radio" name="tabs">
+<label for="tab6">Vulns</label>
+<input id="tab7" type="radio" name="tabs">
+<label for="tab7">Backdoors</label>
+<input id="tab8" type="radio" name="tabs">
+<label for="tab8">Credientials</label>
+<input id="tab9" type="radio" name="tabs">
+<label for="tab9">Location</label>
+<section id="content1">
+
+<div id="error_explanation">
+<h2>
+{{ project.name }}
+</h2>
+<ul>
+some test to replace
+</section>
+<section id="content2">
+<p>
+{{ project.data|safe }}<br><p></p>
+
+</section>
+<section id="content3">
+<p>
+Directorys<br><p></p>
+some test to replace
+<p>
+some test to replace
+</p>
+</p>
+some test to replace
+</section>
+<section id="content4">
+<p>
+Notes<p></p>
+some test to replace
+<p>
+some test to replaceH
+</p>
+</p>
+some test to replace
+</section>
+<section id="content5">
+<p>
+Network<p></p><p>
+some test to replace
+<p>
+some test to replace
+<p>
+some test to replace
+<p>
+some test to replace
+<p>
+some test to replace
+<p>
+some test to replace
+</p>
+</p>
+some test to replace
+</section>
+<section id="content9">
+<p>
+Location<p></p><p>
+Latitude: some test to replace
+</p>
+<p>
+some test to replace
+</p>
+</p>
+some test to replace
+</section>
+</main>
+
+      <footer>
+       <center> <p>&copy; Company 2012</p></center>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../static/js/jquery-1.8.2.min.js"></script>
+    <script src="../static/js/bootstrap.js"></script>
+
+  </body>
+</html>
