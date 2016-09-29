@@ -6,8 +6,10 @@ from flask import render_template
 
 from project.models import *
 from project.controllers import hello
-
+from flask import redirect, url_for
 app = Flask(__name__)
+
+
 
 
 # All views below
@@ -17,22 +19,22 @@ def index():
 	return render_template('starter-template.html')
     
 
-@app.route("/project/<name>")
+
+
+
+@app.route('/search', methods=['POST'])
+def search():
+    name=request.form['name']
+    
+    return redirect(url_for('project', name=name))
+    
+@app.route('/project/<name>')
 def project(name):
-	project = Project.query.filter_by(name=name).first()
-	return render_template('fluid.html', project=project)
-
-@app.route("/hero")
-def hero():
-
-    return render_template('hero.html')
-
-@app.route("/layout")
-def layout():
-
-    return render_template('layout-template.html')
-
-
+    project = Project.query.filter_by(name=name).first()
+    return render_template('fluid.html',
+                           project=project)
+                           
+                           
 # Error Pages
 @app.errorhandler(500)
 def error_page(e):

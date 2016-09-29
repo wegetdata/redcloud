@@ -2,22 +2,75 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
+    <title>Never look at Netcat the same.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Le styles -->
     <link href="../static/css/bootstrap.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-      .sidebar-nav {
-        padding: 9px 0;
-      }
-    </style>
+
+      <style>
+body {
+  margin: 0;
+  background: #000; 
+}
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+.stopfade { 
+   opacity: .5;
+}
+
+
+.projectsearch {
+
+   position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+
+.searchbar{
+  
+  width: 400px;
+  height: 400px;
+  
+  
+
+}
+
+@media screen and (max-width: 500px) { 
+  div{width:70%;} 
+}
+@media screen and (max-device-width: 800px) {
+  html { background: url(//demosthenes.info/assets/images/polina.jpg) #000 no-repeat center center fixed; }
+  #bgvid { display: none; }
+}
+    
+    
+    
+    
+    
+</style>
+    
+    
+<video playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
+    <source src="../static/background-loop.webm" type="video/webm">
+</video>
     <link href="../static/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -33,7 +86,7 @@
   </head>
 
   <body>
-
+  <nav class="navbar navbar-inverse">
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -49,12 +102,12 @@
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
-            <p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>
+            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
-       
+       </nav>
           <style>
 /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
@@ -186,19 +239,19 @@ padding: 15px;
 <input id="tab2" type="radio" name="tabs">
 <label for="tab2">Ports</label>
 <input id="tab3" type="radio" name="tabs">
-<label for="tab3">Directory</label>
+<label for="tab3">Directories</label>
 <input id="tab4" type="radio" name="tabs">
 <label for="tab4">Notes</label>
 <input id="tab5" type="radio" name="tabs">
-<label for="tab5">Network</label>
+<label for="tab5">Networks</label>
 <input id="tab6" type="radio" name="tabs">
-<label for="tab6">Vulns</label>
+<label for="tab6">Vulnerabilities</label>
 <input id="tab7" type="radio" name="tabs">
-<label for="tab7">Backdoors</label>
+<label for="tab7">Exploits and CVEs</label>
 <input id="tab8" type="radio" name="tabs">
-<label for="tab8">Credientials</label>
+<label for="tab8">Credentials</label>
 <input id="tab9" type="radio" name="tabs">
-<label for="tab9">Location</label>
+<label for="tab9">Location Data</label>
 <section id="content1">
 
 <div id="error_explanation">
@@ -206,7 +259,7 @@ padding: 15px;
 {{ project.name }}
 </h2>
 <ul>
-some test to replace
+Target
 </section>
 <section id="content2">
 <p>
@@ -265,7 +318,7 @@ some test to replace
 </main>
 
       <footer>
-       <center> <p>&copy; Company 2012</p></center>
+       <center> <p>NCus</p></center>
       </footer>
 
     </div><!--/.fluid-container-->

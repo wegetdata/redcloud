@@ -1,14 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+<style>
+body {
+  margin: 0;
+  background: #000; 
+}
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+.stopfade { 
+   opacity: .5;
+}
+
+
+.projectsearch {
+
+   position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+
+.searchbar{
+  
+  width: 400px;
+  height: 400px;
+  
+  
+
+}
+
+@media screen and (max-width: 500px) { 
+  div{width:70%;} 
+}
+@media screen and (max-device-width: 800px) {
+  html { background: url(//demosthenes.info/assets/images/polina.jpg) #000 no-repeat center center fixed; }
+  #bgvid { display: none; }
+}
+    
+    
+    
+    
+    
+</style>
+
+<video playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
+    <source src="../static/background-loop.webm" type="video/webm">
+</video>
+
+
     <meta charset="utf-8">
-    <title>Project</title>
+    <title>netcat.us</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <link href="../static/css/bootstrap.css" rel="stylesheet"> 
     <style>
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
@@ -29,8 +91,8 @@
   </head>
 
   <body>
-
     <div class="navbar navbar-fixed-top">
+<nav class="navbar navbar-inverse">
       <div class="navbar-inner">
         <div class="container">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -38,7 +100,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Project name</a>
+          <a class="brand" href="#">Netcat.us</a>
           <div class="nav-collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
@@ -49,11 +111,34 @@
         </div>
       </div>
     </div>
+    </nav>
+    
+    
 
-    <div class="container">
+    <div class="projectsearch">
+<center>
+      <h1></h1><h1></h1><h1></h1><h1></h1><h1></h1>
+<!--<img src="../static/netcat.gif" height="200" width="400"/> -->
 
-      <h1>Bootstrap starter template</h1>
-      <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
+    <form  action="/search" method="post" role="form">
+    
+    <div class="form-group">
+      
+      <input type="text" class="searchbar" id="name" name="name" placeholder="Project Name.."><br>
+      <button type="submit" class="btn btn-success">Search</button>
+  </form> </div>
+             
+            </div>
+            </center>
+        </div>
+  </div>
+</div>
+                    </span>
+                </div>
+            </div>
+        </div>
+  </div>
+</div>
 
 <!-- 
 
