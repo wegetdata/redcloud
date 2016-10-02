@@ -1,0 +1,23 @@
+root@kali44:~# dirbuster
+Starting OWASP DirBuster 1.0-RC1
+Starting dir/file list based brute forcing
+Dir found: / - 200
+Dir found: /images/ - 200
+Dir found: /icons/ - 403
+Dir found: /icons/small/ - 403
+Dir found: /god/ - 200
+File found: /god/index.php - 200
+Dir found: /god/images/ - 200
+File found: /god/main.php - 200
+File found: /god/info.php - 200
+File found: /god/upload.php - 200
+File found: /god/config.php - 200
+File found: /god/gateway.php - 200
+File found: /god/master.php - 200
+File found: /god/viewer.php - 200
+Dir found: /god/creditcards/ - 200
+File found: /god/load.php - 200
+
+	
+
+

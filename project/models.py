@@ -9,12 +9,10 @@ db = SQLAlchemy(app)
 
 class Project(db.Model):
     secretkey = db.Column(db.String(900), primary_key=True)
-    category = db.Column(db.String(900), index=True, unique=True, nullable=False)
-    folder = db.Column(db.String, index=True, unique=True, nullable=False)
+    folder = db.Column(db.String(900), index=True, unique=True, nullable=False)
 
-    def __init__(self, secretkey, category, folder):
+    def __init__(self, secretkey, folder):
         self.secretkey = secretkey
-        self.category = category
         self.folder = folder
 
     def __repr__(self):

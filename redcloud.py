@@ -5,7 +5,7 @@ import re
 from project.models import *
 from sqlalchemy.exc import IntegrityError
 import logging
-
+import uuid,unique,os
 
 #define logging 
 
@@ -25,36 +25,73 @@ s.listen(backlog)
 
 #loop through the recieving data and parse out project/catagory
 
+def writefile():
+	with open(filename, "w") as f:
+						f.write(data)
+
+
 def listener():
 	try:
 		while 1: 
 		    client, address = s.accept() 
 		    data = client.recv(size) 
 		    if data: 
-		        client.send(data)
-		        mProject = re.search('^([^\/]+)', data)
-		        project = mProject.group(0)
-		        mKeyword = re.search('\/(.*)/', data)
-		        keyword = mKeyword.group(1)
-			data = '\n'.join(data.split('\n')[1:]) 
-
-				#update the sqlite db
-		    	project = Project(project,keyword,data)
-		    	db.session.add(project)
-		    	db.session.commit()
-			#debugging
-			print(data)
+		        client.send(data) #recieve data
+		        mProject = re.search('^([^\/]+)', data) #regex to get project
+		        
+		        global secretkey
+		        secretkey = mProject.group(0) #pull group
+		        mKeyword = re.search('\/(.*)/', data) #regex to get tabname
+		        
+		        global catagory
+		        category = mKeyword.group(1) #match group
+		        data = '\n'.join(data.split('\n')[1:])  #split the newlines
+		        folder = str(uuid.uuid4())
+		    
+		    if db.session.query(Project).filter_by(secretkey=secretkey).first():
+		    	fexist = db.session.query(Project).filter_by(secretkey=secretkey).first()
+		        print("DEBUG: SecretKey:"+ fexist.secretkey)
+		        print("DEBUG: Folder:"+ fexist.folder)
+		        global filename
+		        filename = "/root/redcloud/files/{0}/{1}/index.txt".format(fexist.folder, category)
+		        print("DEBUG: Filename : " + filename)
+		        project = Project(secretkey,fexist.folder)
+		        print("DEBUG: SecretKey:"+ fexist.secretkey)
+		        print("DEBUG: Folder:"+ fexist.folder)
+		        db.session.merge(project)
+		        print("DEBUG: Merged")
+		        db.session.commit()
+		        print("DEBUG: Commited!")
+		        os.makedirs(os.path.dirname(filename))
+		        with open(filename, "w") as f:
+					f.write(data)
+		    else:
+				try:
+					filename = "/root/redcloud/files/{0}/{1}/index.txt".format(folder, category)
+					os.makedirs(os.path.dirname(filename))
+					print("DEBUG: Created Directory:" + filename)
+					project = Project(secretkey,folder)
+					print("DEBUG: SQLITE INFO: "+ secretkey + "\n" + folder )
+					db.session.merge(project)
+					db.session.commit()
+					with open(filename, "w") as f:
+						f.write(data)
+				except OSError as exc: # Guard against race condition
+					if exc.errno != errno.EEXIST:
+						raise
+			
+				
 
 
 
 #error handling
 	except Exception as e:
-	        print("Oops an exception occurred")
+	        print(e)
 	        logging.error(e)
 	        db.session.rollback()
 	        db.session.flush()
 	        listener()
-
-
+	        
+	        
 if __name__ == '__main__':
 	listener()

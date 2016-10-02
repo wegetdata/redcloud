@@ -1,0 +1,14 @@
+
+Starting Nmap 6.40 ( http://nmap.org ) at 2016-09-30 20:22 UTC
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0000070s latency).
+Not shown: 65533 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+| ssh-hostkey: 1024 d0:5b:f9:e5:3a:29:3d:fb:91:cf:8b:e2:1f:83:a0:46 (DSA)
+| 2048 16:3d:08:75:5f:09:df:4c:d3:a3:8b:69:23:29:38:83 (RSA)
+|_256 85:ce:10:96:38:8a:53:b4:56:25:b7:cf:c9:02:48:c7 (ECDSA)
+80/tcp open  http
+|_http-title: netcat.us
+
+Nmap done: 1 IP address (1 host up) scanned in 6.48 seconds

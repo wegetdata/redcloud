@@ -5,6 +5,7 @@ from flask import request
 from flask import render_template
 from flask import Markup, flash
 from project.models import *
+from models import Project
 from project.controllers import hello
 from flask import redirect, url_for
 import os.path
@@ -32,16 +33,24 @@ def search():
     
 @app.route('/project/<secretkey>')
 def project(secretkey):
+    target = ""
+    ports = ""
+    directory = ""
+    
     project = Project.query.filter_by(secretkey=secretkey).first()
     
-    #paths
-    
-    if os.path.exists('/root/redcloud/files/'+ project.folder +'/port/index.txt'):
-        content = open('/root/redcloud/files/'+ project.folder +'/port/index.txt').read()
+    if os.path.exists('/root/redcloud/files/'+ project.folder +'/ports/index.txt'):
+        ports = open('/root/redcloud/files/'+ project.folder +'/ports/index.txt').read()
     else:
-        content = ""
+        print ("File not found: " + ports)
+            
+    if os.path.exists('/root/redcloud/files/'+ project.folder +'/dir/index.txt'):
+        directory = open('/root/redcloud/files/'+ project.folder +'/dir/index.txt').read()
+    else:
+        print("File not found: " + directory)
+        
     return render_template('fluid.html',
-                            project=project, content=content)
+                            project=project, ports=ports, directory=directory)
                            
 # Error Pages
 @app.errorhandler(500)

@@ -14,3 +14,137 @@ ERROR:root:(IntegrityError) UNIQUE constraint failed: project.category u'INSERT 
 ERROR:root:(IntegrityError) UNIQUE constraint failed: project.name u'INSERT INTO project (name, category, data) VALUES (?, ?, ?)' ('test', 'testing', '\nStarting Nmap 6.40 ( http://nmap.org ) at 2016-09-28 20:16 UTC\nNSE: Loaded 95 scripts for scanning.\nNSE: Script Pre-scanning.\nNSE: Starting runlevel 1 (of 1) scan.\nNSE: Script Post-scanning.\nNSE: Starting runlevel 1 (of 1) scan.\nRead data files from: /usr/bin/../share/nmap\nNmap done: 0 IP addresses (0 hosts up) scanned in 0.21 seconds\n           Raw packets sent: 0 (0B) | Rcvd: 0 (0B)\n')
 ERROR:root:'NoneType' object has no attribute 'group'
 ERROR:root:(IntegrityError) UNIQUE constraint failed: project.category u'INSERT INTO project (name, category, data) VALUES (?, ?, ?)' ('test', 'test', '\n# resume information\nresume-index = 1767\nrate =     100.00\nrandomize-hosts = true\nseed = 8954913453807906483\nshard = 1/1\n# ADAPTER SETTINGS\nadapter = \nadapter-ip = 172.16.70.103\nadapter-mac = 00:00:00:00:00:00\nrouter-mac = 00:00:00:00:00:00\n# OUTPUT/REPORTING SETTINGS\noutput-format = unknown(0)\nshow = open,,\noutput-filename = \nrotate = 0\nrotate-dir = .\nrotate-offset = 0\nrotate-filesize = 0\npcap = \n# TARGET SELECTION (IP, PORTS, EXCLUDES)\nports = 0-65535\nrange = 172.30.1.0/24\n\ncapture = cert\nnocapture = html\nnocapture = heartbleed\n\nmin-packet = 60\n')
+ERROR:root:(IntegrityError) UNIQUE constraint failed: project.category u'INSERT INTO project (name, category, data) VALUES (?, ?, ?)' ('noinf', 'noinfo', "Dangerous input /'\n")
+ERROR:root:(IntegrityError) UNIQUE constraint failed: project.category u'INSERT INTO project (name, category, data) VALUES (?, ?, ?)' ('noinf', 'noinfo', '[app]\nHOST = 0.0.0.0 ; Set to 0.0.0.0 to have the server available externally.\nPORT = 80\nDEBUG = True ; Auto-reload and debugger.\n\n\n[database]\nDBTYPE = mysql\nDBHOST = hostname\nDBNAME = database\nDBUSER = user\nDBPASS = password\n')
+ERROR:root:(IntegrityError) UNIQUE constraint failed: project.data u'INSERT INTO project (name, category, data) VALUES (?, ?, ?)' ('noinf', 'noinfo', "Dangerous input /'\n")
+ERROR:root:global name 'uuid' is not defined
+ERROR:root:global name 'uuid' is not defined
+ERROR:root:global name 'os' is not defined
+ERROR:root:global name 'folder' is not defined
+ERROR:root:global name 'name' is not defined
+ERROR:root:global name 'name' is not defined
+ERROR:root:global name 'name' is not defined
+ERROR:root:global name 'name' is not defined
+ERROR:root:global name 'name' is not defined
+ERROR:root:(IntegrityError) UNIQUE constraint failed: project.category u'INSERT INTO project (secretkey, category, folder) VALUES (?, ?, ?)' ('test', 'scan', '/root/files/7ac5f0c8-810f-4664-8c8f-4856003e06f3/index.txt')
+ERROR:root:(IntegrityError) UNIQUE constraint failed: project.category u'INSERT INTO project (secretkey, category, folder) VALUES (?, ?, ?)' ('test', 'scan', 'c0b27fba-02cd-45e0-82e9-f6e6c7c7e8ee')
+ERROR:root:(IntegrityError) UNIQUE constraint failed: project.category u'INSERT INTO project (secretkey, category, folder) VALUES (?, ?, ?)' ('test', 'scan', '4e84550a-9425-4b50-97a3-7b08d44062cf')
+ERROR:root:(IntegrityError) UNIQUE constraint failed: project.category u'INSERT INTO project (secretkey, category, folder) VALUES (?, ?, ?)' ('test', 'scan', 'f8199ed6-778e-4f7b-b0a5-68f65d51c06f')
+ERROR:root:(IntegrityError) UNIQUE constraint failed: project.category u'INSERT INTO project (secretkey, category, folder) VALUES (?, ?, ?)' ('test', 'scan', 'bedd2c1a-175c-42c1-beb7-5b9393292bcd')
+ERROR:root:(IntegrityError) UNIQUE constraint failed: project.category u'INSERT INTO project (secretkey, category, folder) VALUES (?, ?, ?)' ('blahbal', 'scan', 'a2dbaade-cd1b-4845-8cea-d7544abb685d')
+ERROR:root:(IntegrityError) UNIQUE constraint failed: project.category u'INSERT INTO project (secretkey, category, folder) VALUES (?, ?, ?)' ('justin', 'port', 'bc3eeb89-56d2-45b0-8145-09f793b76075')
+ERROR:root:(IntegrityError) UNIQUE constraint failed: project.category u'INSERT INTO project (secretkey, category, folder) VALUES (?, ?, ?)' ('justin', 'port', '4f097b7a-96ae-49d5-af92-cf7979388185')
+ERROR:root:(IntegrityError) UNIQUE constraint failed: project.category u'INSERT INTO project (secretkey, category, folder) VALUES (?, ?, ?)' ('targetnmap', 'port', 'b71f530f-3cc5-47b6-91be-ca26988bf56b')
+ERROR:root:(IntegrityError) UNIQUE constraint failed: project.category u'INSERT INTO project (secretkey, category, folder) VALUES (?, ?, ?)' ('targetnmap', 'port', '8444f35e-54b1-432f-b360-edf0ca29223d')
+ERROR:root:(IntegrityError) UNIQUE constraint failed: project.secretkey u'INSERT INTO project (secretkey, category, folder) VALUES (?, ?, ?)' ('GET http:', '/www.baidu.com/favicon.ico HTTP', '6afb74a2-6d4d-4d15-b21a-7593594f6114')
+ERROR:root:(IntegrityError) UNIQUE constraint failed: project.category u'INSERT INTO project (secretkey, category, folder) VALUES (?, ?, ?)' ('GET http:', '/www.baidu.com/cache/global/img/gs.gif HTTP', '38e4f5e9-6546-49fe-992e-ca41f5dbb48d')
+ERROR:root:(IntegrityError) UNIQUE constraint failed: project.category u'INSERT INTO project (secretkey, category, folder) VALUES (?, ?, ?)' ('GET http:', '/www.baidu.com/cache/global/img/gs.gif HTTP', 'fe674308-8a68-4766-b5f9-93c379e7e90b')
+ERROR:root:(OperationalError) no such table: project u'INSERT INTO project (secretkey, category, folder) VALUES (?, ?, ?)' ('targetnmap', 'port', '78ca2f9d-b801-44c1-9648-f784dfca2d53')
+ERROR:root:(IntegrityError) UNIQUE constraint failed: project.category u'INSERT INTO project (secretkey, category, folder) VALUES (?, ?, ?)' ('targetnmap', 'port', 'a1d9daee-d2e5-40a0-8d86-4b1ca68b72d9')
+ERROR:root:(IntegrityError) UNIQUE constraint failed: project.category u'INSERT INTO project (secretkey, category, folder) VALUES (?, ?, ?)' ('targetnmap', 'port', 'ce313847-bf6f-43de-8492-f9b9e33635fe')
+ERROR:root:(IntegrityError) UNIQUE constraint failed: project.category u'INSERT INTO project (secretkey, category, folder) VALUES (?, ?, ?)' ('targetnmap', 'port', '69de1576-d4ed-461a-b78c-b736aefeca8f')
+ERROR:root:(IntegrityError) UNIQUE constraint failed: project.category u'INSERT INTO project (secretkey, category, folder) VALUES (?, ?, ?)' ('targetnmap', 'port', 'edfdbd6c-208d-4c76-a7d1-3dfedade999d')
+ERROR:root:(IntegrityError) UNIQUE constraint failed: project.category u'INSERT INTO project (secretkey, category, folder) VALUES (?, ?, ?)' ('targetnmap', 'port', '72386696-7829-48d4-b1a0-ec4dfdd9e801')
+ERROR:root:(IntegrityError) UNIQUE constraint failed: project.category u'INSERT INTO project (secretkey, category, folder) VALUES (?, ?, ?)' ('targetnmap', 'port', '2789c8df-e4db-450b-92c0-9351c5a6e262')
+ERROR:root:'ScopedSession' object has no attribute 'save'
+ERROR:root:'ScopedSession' object has no attribute 'save_or_update'
+ERROR:root:'ScopedSession' object has no attribute 'save_or_update'
+ERROR:root:'ScopedSession' object has no attribute 'save'
+ERROR:root:global name 'session' is not defined
+ERROR:root:'ScopedSession' object has no attribute 'save'
+ERROR:root:'NoneType' object has no attribute 'group'
+ERROR:root:'NoneType' object has no attribute 'group'
+ERROR:root:'NoneType' object has no attribute 'group'
+ERROR:root:__init__() takes exactly 4 arguments (3 given)
+ERROR:root:__init__() takes exactly 4 arguments (3 given)
+ERROR:root:(OperationalError) no such table: project u'SELECT project.secretkey AS project_secretkey, project.folder AS project_folder \nFROM project \nWHERE project.secretkey = ?' ('targetnmap',)
+ERROR:root:Entity '<class 'project.models.Project'>' has no property 'name'
+ERROR:root:Entity '<class 'project.models.Project'>' has no property 'name'
+ERROR:root:global name 'filename' is not defined
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/66b83658-7669-4a9a-b1d0-0963fde1c516/ports/index.txt'
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/608f07d6-8311-4fb8-b045-12bee757f426/ports/index.txt'
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/b3755733-983e-4dc8-9d9c-056a077d7b26/ports/index.txt'
+ERROR:root:'Project' object has no attribute 'filename'
+ERROR:root:'Project' object has no attribute 'category'
+ERROR:root:'Project' object has no attribute 'category'
+ERROR:root:local variable 'project' referenced before assignment
+ERROR:root:local variable 'project' referenced before assignment
+ERROR:root:local variable 'project' referenced before assignment
+ERROR:root:local variable 'project' referenced before assignment
+ERROR:root:local variable 'project' referenced before assignment
+ERROR:root:local variable 'project' referenced before assignment
+ERROR:root:local variable 'project' referenced before assignment
+ERROR:root:local variable 'project' referenced before assignment
+ERROR:root:local variable 'project' referenced before assignment
+ERROR:root:local variable 'project' referenced before assignment
+ERROR:root:'NoneType' object has no attribute 'secretkey'
+ERROR:root:'NoneType' object has no attribute 'secretkey'
+ERROR:root:'NoneType' object has no attribute 'secretkey'
+ERROR:root:'NoneType' object has no attribute 'secretkey'
+ERROR:root:'NoneType' object has no attribute 'secretkey'
+ERROR:root:'NoneType' object has no attribute 'secretkey'
+ERROR:root:'NoneType' object has no attribute 'secretkey'
+ERROR:root:'NoneType' object has no attribute 'secretkey'
+ERROR:root:'NoneType' object has no attribute 'secretkey'
+ERROR:root:global name 'secretkey' is not defined
+ERROR:root:global name 'secretkey' is not defined
+ERROR:root:'NoneType' object has no attribute 'secretkey'
+ERROR:root:'NoneType' object has no attribute 'secretkey'
+ERROR:root:'NoneType' object has no attribute 'secretkey'
+ERROR:root:'NoneType' object has no attribute 'secretkey'
+ERROR:root:'NoneType' object has no attribute 'secretkey'
+ERROR:root:'NoneType' object has no attribute 'secretkey'
+ERROR:root:global name 'secretkey' is not defined
+ERROR:root:global name 'secretkey' is not defined
+ERROR:root:'NoneType' object has no attribute 'secretkey'
+ERROR:root:'NoneType' object has no attribute 'secretkey'
+ERROR:root:'NoneType' object has no attribute 'secretkey'
+ERROR:root:'NoneType' object has no attribute 'folder'
+ERROR:root:'NoneType' object has no attribute 'folder'
+ERROR:root:'NoneType' object has no attribute 'folder'
+ERROR:root:'NoneType' object has no attribute 'folder'
+ERROR:root:'NoneType' object has no attribute 'secretkey'
+ERROR:root:'NoneType' object has no attribute 'secretkey'
+ERROR:root:'NoneType' object has no attribute 'secretkey'
+ERROR:root:'NoneType' object has no attribute 'secretkey'
+ERROR:root:'NoneType' object has no attribute 'secretkey'
+ERROR:root:local variable 'filename' referenced before assignment
+ERROR:root:local variable 'filename' referenced before assignment
+ERROR:root:global name 'filename' is not defined
+ERROR:root:global name 'filename' is not defined
+ERROR:root:local variable 'filename' referenced before assignment
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/55fa02bb-214b-48f8-9525-b575f9799979/dir/index.txt'
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/55fa02bb-214b-48f8-9525-b575f9799979/dir/index.txt'
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/55fa02bb-214b-48f8-9525-b575f9799979/dir/index.txt'
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/55fa02bb-214b-48f8-9525-b575f9799979/dir/index.txt'
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/55fa02bb-214b-48f8-9525-b575f9799979/dir/index.txt'
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/55fa02bb-214b-48f8-9525-b575f9799979/dir/index.txt'
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/55fa02bb-214b-48f8-9525-b575f9799979/dir/index.txt'
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/55fa02bb-214b-48f8-9525-b575f9799979/dir/index.txt'
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/55fa02bb-214b-48f8-9525-b575f9799979/dir/index.txt'
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/55fa02bb-214b-48f8-9525-b575f9799979/dir/index.txt'
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/55fa02bb-214b-48f8-9525-b575f9799979/dir/index.txt'
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/55fa02bb-214b-48f8-9525-b575f9799979/dir/index.txt'
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/0b32b77b-c653-4142-bade-2a52054124fe/ports/index.txt'
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/0b32b77b-c653-4142-bade-2a52054124fe/dir/index.txt'
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/0b32b77b-c653-4142-bade-2a52054124fe/dir/index.txt'
+ERROR:root:local variable 'filename' referenced before assignment
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/b90e990c-d962-4f3f-b0dd-924aff887059/dir/index.txt'
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/b90e990c-d962-4f3f-b0dd-924aff887059/dir/index.txt'
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/b90e990c-d962-4f3f-b0dd-924aff887059/dir/index.txt'
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/b90e990c-d962-4f3f-b0dd-924aff887059/dir/index.txt'
+ERROR:root:local variable 'filename' referenced before assignment
+ERROR:root:global name 'errno' is not defined
+ERROR:root:local variable 'filename' referenced before assignment
+ERROR:root:local variable 'filename' referenced before assignment
+ERROR:root:local variable 'filename' referenced before assignment
+ERROR:root:local variable 'filename' referenced before assignment
+ERROR:root:local variable 'filename' referenced before assignment
+ERROR:root:local variable 'filename' referenced before assignment
+ERROR:root:local variable 'filename' referenced before assignment
+ERROR:root:local variable 'filename' referenced before assignment
+ERROR:root:global name 'filename' is not defined
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/d6d401be-b0ad-4026-9a47-24ee18a4f192/dir/index.txt'
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/d6d401be-b0ad-4026-9a47-24ee18a4f192/dir/index.txt'
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/89f5c025-ac61-400f-a3a6-aee021cb32fa/ports/index.txt'
+ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/89f5c025-ac61-400f-a3a6-aee021cb32fa/ports/index.txt'
