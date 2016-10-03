@@ -144,6 +144,7 @@ background: #fff;
 section {
 display: none;
 padding: 20px 0 0;
+white-space: pre-wrap;
 border-top: 1px solid #ddd;
 }
 input {
@@ -234,6 +235,23 @@ padding: 15px;
 </head>
 <body>
 <main>
+  
+  
+   <!-- Display flashed messages -->
+      {% with msgs = get_flashed_messages() %}
+        {% if msgs %}
+          {%- for msg in msgs %}
+            <div class="alert alert-info">
+              {{ msg }}
+            </div>
+          {% endfor -%}
+        {% endif %}
+      {% endwith %}
+      
+      {% block body %} {% endblock %}
+  
+  
+  
 <input id="tab1" type="radio" name="tabs" checked>
 <label for="tab1">Targets</label>
 <input id="tab2" type="radio" name="tabs">
@@ -259,17 +277,9 @@ padding: 15px;
 {{ project.secretkey }}
 </h2>
 <ul>
-<b>Targets and Associated IP Addresses</b>
-<!-- Using labels instead of text for neater formatting -->
-<br><label>Test Output:</label>
-<br>
-<input type="textarea" name="Folder"</label></br>
-<br>
-    <textarea style="width: 700px; height: 550px;"> 
-     {{ target }}
-    </textarea>
-</td>
 
+<b>Target Ip Address:</b><br>
+{{ target }}
 <br>
 
 <!-- Using labels instead of text for neater formatting -->
@@ -278,25 +288,21 @@ padding: 15px;
 <!-- Comment Space to Clean Up Code: Next Section Beneath This Line -->
 </section>
 <section id="content2">
-<br><label>Information on Ports Here</label>
+
 <br>
-<input type="text" name="Ports"</label></br>
-    <textarea style="width: 700px; height: 550px;"> 
+
      {{ ports }}
-    </textarea>
+  
 </section>
 
 <!-- Comment Space to Clean Up Code: Next Section Beneath This Line -->
 <section id="content3">
 <p>
-Directories<br><p></p>
-<br><label>Information on Directories Here</label>
-<br>
-<input type="text" name="DIRBftw"</label></br>
 
-    <textarea style="width: 700px; height: 550px;"> 
+<br>
+
      {{ directory }}
-    </textarea>
+
 
 </section>
 
@@ -304,13 +310,7 @@ Directories<br><p></p>
 <section id="content4">
 <p>
 Services<p></p>
-<br><label>Information on Active Services Here</label>
-<br>
-<input type="text" name="Services"</label></br>
-
-<br><label>Banners Associated Here</label>
-<br>
-<input type="text" name="Banners"</label></br>
+{{ ServiceParse }}
 </section>
 
 <!-- Comment Space to Clean Up Code: Next Section Beneath This Line -->
@@ -421,7 +421,7 @@ Credentials & Identity Data<p></p>
 <section id="content9">
 <p>
 Notes<p></p><p>
-<br><label>Engagement Notes and Other Interesting Informations</label>
+<br><label>Engagement Notes and Other Interesting Information</label>
 <br>
 <input type="text" name="NOTE"</label></br>
 </section>

@@ -1,0 +1,6 @@
+Host: www.baidu.com
+Connection: keep-alive
+Accept-Encoding: gzip, deflate
+Accept: */*
+User-Agent: python-requests/2.9.1
+

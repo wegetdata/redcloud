@@ -16,7 +16,7 @@ video {
     height: auto;
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
- background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+ /*background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;*/
   background-size: cover;
   transition: 1s opacity;
 }
@@ -124,7 +124,7 @@ video {
     
     <div class="form-group">
       
-      <input type="text" class="searchbar" id="name" name="name" placeholder="Project Name.."><br>
+      <input type="text" class="searchbar" id="name" name="name" placeholder="Secret Key.."><br>
       <button type="submit" class="btn btn-success">Search</button>
   </form> </div>
              
@@ -133,6 +133,20 @@ video {
         </div>
   </div>
 </div>
+
+
+ <!-- Display flashed messages -->
+      {% with msgs = get_flashed_messages() %}
+        {% if msgs %}
+          {%- for msg in msgs %}
+            <div class="alert alert-info">
+              {{ msg }}
+            </div>
+          {% endfor -%}
+        {% endif %}
+      {% endwith %}
+      
+      {% block body %} {% endblock %}
                     </span>
                 </div>
             </div>

@@ -29,7 +29,12 @@ def writefile():
 	with open(filename, "w") as f:
 						f.write(data)
 
-
+def Parse(data):
+    #regex tp get ports service and version
+    pService = re.findall('([0-9]{1,4}\/(?:tcp|udp)\s+(?:open|closed|filtered).*)', data) #regex to get project
+    print(pService)
+        
+        
 def listener():
 	try:
 		while 1: 
@@ -79,8 +84,7 @@ def listener():
 				except OSError as exc: # Guard against race condition
 					if exc.errno != errno.EEXIST:
 						raise
-			
-				
+
 
 
 

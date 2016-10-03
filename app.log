@@ -148,3 +148,10 @@ ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/d6d401be-b
 ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/d6d401be-b0ad-4026-9a47-24ee18a4f192/dir/index.txt'
 ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/89f5c025-ac61-400f-a3a6-aee021cb32fa/ports/index.txt'
 ERROR:root:[Errno 2] No such file or directory: '/root/redcloud/files/89f5c025-ac61-400f-a3a6-aee021cb32fa/ports/index.txt'
+ERROR:root:global name 'secretkey' is not defined
+ERROR:root:'NoneType' object has no attribute 'group'
+ERROR:root:'NoneType' object has no attribute 'group'
+ERROR:root:'NoneType' object has no attribute 'group'
+ERROR:root:'NoneType' object has no attribute 'group'
+ERROR:root:'NoneType' object has no attribute 'group'
+ERROR:root:'NoneType' object has no attribute 'group'

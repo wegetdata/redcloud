@@ -12,3 +12,133 @@ PORT   STATE SERVICE
 |_http-title: netcat.us
 
 Nmap done: 1 IP address (1 host up) scanned in 6.48 seconds
+
+Starting Nmap 6.40 ( http://nmap.org ) at 2016-10-02 21:07 UTC
+NSE: Loaded 95 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating SYN Stealth Scan at 21:07
+Scanning localhost (127.0.0.1) [1000 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Discovered open port 22/tcp on 127.0.0.1
+Discovered open port 9000/tcp on 127.0.0.1
+Completed SYN Stealth Scan at 21:07, 1.58s elapsed (1000 total ports)
+NSE: Script scanning 127.0.0.1.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 21:07
+Completed NSE at 21:07, 0.16s elapsed
+Nmap scan report for localhost (127.0.0.1)
+Host is up, received localhost-response (0.000015s latency).
+Scanned at 2016-10-02 21:07:42 UTC for 2s
+Not shown: 997 closed ports
+Reason: 997 resets
+PORT     STATE SERVICE    REASON
+22/tcp   open  ssh        syn-ack
+| ssh-hostkey: 1024 d0:5b:f9:e5:3a:29:3d:fb:91:cf:8b:e2:1f:83:a0:46 (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAIbhZwlpxXFR9hEko4KjEJ9LhQdaKnE/pYRtrZHCGpxh5V+0pIoYsZ3aG3G3p3lLJav0ipYKqHBguyXc+M+u5MLdW6wK+k8vyY1SbvGXPZxFPUp6/bVkL3KNnm9mhAG1oi/oe0tWObCIljCKTnk24RUqRsvmMdXq3uoBS13uX+LpAAAAFQCzIhKvzJNw7r/Ji8afldJRnTY1EQAAAIAli7On8EWwC5zWV1mGTsqMEq5bLxGjUDkf8eAr0docmVd0gft2e5ObMUPalXILLInPCJ7u2KtzjDXeLUpnJvQlGUhuHKSi3EyX+As/gSk4GxngoE8modmt1hFaQI0XMb1gGY7lm3kOya/PN6NFjDx0UVQFLmWqz+Z5l+pduF9ciAAAAIBGII6TfWvttZ+r1ke8gH4dQZ/M62HB9RyLgs1sqribBSvzvkx/RjW/q3pGHJQEUR7QXN0QldUJx1GrskTPPCCo36JraE/KO0HFsC4LdntJa2G20Vef+15Q+j13fMfG0O8w7I8PCtTzZmdoLdr/T5CeBY+Ur515S/0+qoP72rTAFA==
+| 2048 16:3d:08:75:5f:09:df:4c:d3:a3:8b:69:23:29:38:83 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNQB0LDymdj0+eoKbV5a6gaA95V2WKppnGX9ivSq/B5TGNf3VCLD9B4mD7MoDp2b4Z+eDJnQQuiroGLdTtzHxktm1hdRJwsfDEqVBVrW/yk9l3SRA4lzAcWlTZ0QmkDwSvdh2TKwj/FJrLxSCu9/6iJ61MBcIerDXjC4i5XOzrG/4VQAWgg9ddMgbc9MoQtw6He/vkY24i3Kkv7RE1SanOFDj7K9BkRaWHx2LVqR9WliIBGoXvASku00x3ZPHDlBfmZ2yTqmIf5/pjalUgMgv6ZKxjZ5erRdu6Yx15RSa+NAcoNUqLJGT/cLDXThWCvpqzmxYiUsWxZGDIklbTooND
+| 256 85:ce:10:96:38:8a:53:b4:56:25:b7:cf:c9:02:48:c7 (ECDSA)
+|_ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAQ/sMGFMcLOXGm4OHMewoI0/llfAiwLbBVOmzo2h3LvXLxUH0s7dFMp+v+IjH9JRkmXmTmA1bMMDMA+qtsHKM4=
+80/tcp   open  http       syn-ack
+|_http-methods: HEAD OPTIONS GET
+|_http-title: netcat.us
+9000/tcp open  cslistener syn-ack
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 21:07
+Completed NSE at 21:07, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 2.02 seconds
+           Raw packets sent: 1061 (46.684KB) | Rcvd: 2126 (89.300KB)
+
+Starting Nmap 6.40 ( http://nmap.org ) at 2016-10-02 21:08 UTC
+NSE: Loaded 95 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating SYN Stealth Scan at 21:08
+Scanning localhost (127.0.0.1) [65535 ports]
+Discovered open port 80/tcp on 127.0.0.1
+Discovered open port 22/tcp on 127.0.0.1
+Discovered open port 9000/tcp on 127.0.0.1
+Completed SYN Stealth Scan at 21:08, 6.20s elapsed (65535 total ports)
+NSE: Script scanning 127.0.0.1.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 21:08
+Completed NSE at 21:08, 0.14s elapsed
+Nmap scan report for localhost (127.0.0.1)
+Host is up, received localhost-response (0.0000080s latency).
+Scanned at 2016-10-02 21:08:13 UTC for 6s
+Not shown: 65532 closed ports
+Reason: 65532 resets
+PORT     STATE SERVICE    REASON
+22/tcp   open  ssh        syn-ack
+| ssh-hostkey: 1024 d0:5b:f9:e5:3a:29:3d:fb:91:cf:8b:e2:1f:83:a0:46 (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAIbhZwlpxXFR9hEko4KjEJ9LhQdaKnE/pYRtrZHCGpxh5V+0pIoYsZ3aG3G3p3lLJav0ipYKqHBguyXc+M+u5MLdW6wK+k8vyY1SbvGXPZxFPUp6/bVkL3KNnm9mhAG1oi/oe0tWObCIljCKTnk24RUqRsvmMdXq3uoBS13uX+LpAAAAFQCzIhKvzJNw7r/Ji8afldJRnTY1EQAAAIAli7On8EWwC5zWV1mGTsqMEq5bLxGjUDkf8eAr0docmVd0gft2e5ObMUPalXILLInPCJ7u2KtzjDXeLUpnJvQlGUhuHKSi3EyX+As/gSk4GxngoE8modmt1hFaQI0XMb1gGY7lm3kOya/PN6NFjDx0UVQFLmWqz+Z5l+pduF9ciAAAAIBGII6TfWvttZ+r1ke8gH4dQZ/M62HB9RyLgs1sqribBSvzvkx/RjW/q3pGHJQEUR7QXN0QldUJx1GrskTPPCCo36JraE/KO0HFsC4LdntJa2G20Vef+15Q+j13fMfG0O8w7I8PCtTzZmdoLdr/T5CeBY+Ur515S/0+qoP72rTAFA==
+| 2048 16:3d:08:75:5f:09:df:4c:d3:a3:8b:69:23:29:38:83 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNQB0LDymdj0+eoKbV5a6gaA95V2WKppnGX9ivSq/B5TGNf3VCLD9B4mD7MoDp2b4Z+eDJnQQuiroGLdTtzHxktm1hdRJwsfDEqVBVrW/yk9l3SRA4lzAcWlTZ0QmkDwSvdh2TKwj/FJrLxSCu9/6iJ61MBcIerDXjC4i5XOzrG/4VQAWgg9ddMgbc9MoQtw6He/vkY24i3Kkv7RE1SanOFDj7K9BkRaWHx2LVqR9WliIBGoXvASku00x3ZPHDlBfmZ2yTqmIf5/pjalUgMgv6ZKxjZ5erRdu6Yx15RSa+NAcoNUqLJGT/cLDXThWCvpqzmxYiUsWxZGDIklbTooND
+| 256 85:ce:10:96:38:8a:53:b4:56:25:b7:cf:c9:02:48:c7 (ECDSA)
+|_ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAQ/sMGFMcLOXGm4OHMewoI0/llfAiwLbBVOmzo2h3LvXLxUH0s7dFMp+v+IjH9JRkmXmTmA1bMMDMA+qtsHKM4=
+80/tcp   open  http       syn-ack
+|_http-methods: HEAD OPTIONS GET
+|_http-title: netcat.us
+9000/tcp open  cslistener syn-ack
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 21:08
+Completed NSE at 21:08, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 6.61 seconds
+           Raw packets sent: 65593 (2.886MB) | Rcvd: 131189 (5.510MB)
+
+Starting Nmap 6.40 ( http://nmap.org ) at 2016-10-02 21:09 UTC
+NSE: Loaded 110 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating SYN Stealth Scan at 21:09
+Scanning localhost (127.0.0.1) [65535 ports]
+Discovered open port 22/tcp on 127.0.0.1
+Discovered open port 80/tcp on 127.0.0.1
+Discovered open port 9000/tcp on 127.0.0.1
+Completed SYN Stealth Scan at 21:09, 6.28s elapsed (65535 total ports)
+Initiating Service scan at 21:09
+Scanning 3 services on localhost (127.0.0.1)
+Completed Service scan at 21:10, 41.06s elapsed (3 services on 1 host)
+NSE: Script scanning 127.0.0.1.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 21:10
+Completed NSE at 21:10, 0.16s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Nmap scan report for localhost (127.0.0.1)
+Host is up, received localhost-response (0.000010s latency).
+Scanned at 2016-10-02 21:09:52 UTC for 48s
+Not shown: 65532 closed ports
+Reason: 65532 resets
+PORT     STATE SERVICE REASON  VERSION
+22/tcp   open  ssh     syn-ack (protocol 2.0)
+| ssh-hostkey: 1024 d0:5b:f9:e5:3a:29:3d:fb:91:cf:8b:e2:1f:83:a0:46 (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAIbhZwlpxXFR9hEko4KjEJ9LhQdaKnE/pYRtrZHCGpxh5V+0pIoYsZ3aG3G3p3lLJav0ipYKqHBguyXc+M+u5MLdW6wK+k8vyY1SbvGXPZxFPUp6/bVkL3KNnm9mhAG1oi/oe0tWObCIljCKTnk24RUqRsvmMdXq3uoBS13uX+LpAAAAFQCzIhKvzJNw7r/Ji8afldJRnTY1EQAAAIAli7On8EWwC5zWV1mGTsqMEq5bLxGjUDkf8eAr0docmVd0gft2e5ObMUPalXILLInPCJ7u2KtzjDXeLUpnJvQlGUhuHKSi3EyX+As/gSk4GxngoE8modmt1hFaQI0XMb1gGY7lm3kOya/PN6NFjDx0UVQFLmWqz+Z5l+pduF9ciAAAAIBGII6TfWvttZ+r1ke8gH4dQZ/M62HB9RyLgs1sqribBSvzvkx/RjW/q3pGHJQEUR7QXN0QldUJx1GrskTPPCCo36JraE/KO0HFsC4LdntJa2G20Vef+15Q+j13fMfG0O8w7I8PCtTzZmdoLdr/T5CeBY+Ur515S/0+qoP72rTAFA==
+| 2048 16:3d:08:75:5f:09:df:4c:d3:a3:8b:69:23:29:38:83 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNQB0LDymdj0+eoKbV5a6gaA95V2WKppnGX9ivSq/B5TGNf3VCLD9B4mD7MoDp2b4Z+eDJnQQuiroGLdTtzHxktm1hdRJwsfDEqVBVrW/yk9l3SRA4lzAcWlTZ0QmkDwSvdh2TKwj/FJrLxSCu9/6iJ61MBcIerDXjC4i5XOzrG/4VQAWgg9ddMgbc9MoQtw6He/vkY24i3Kkv7RE1SanOFDj7K9BkRaWHx2LVqR9WliIBGoXvASku00x3ZPHDlBfmZ2yTqmIf5/pjalUgMgv6ZKxjZ5erRdu6Yx15RSa+NAcoNUqLJGT/cLDXThWCvpqzmxYiUsWxZGDIklbTooND
+| 256 85:ce:10:96:38:8a:53:b4:56:25:b7:cf:c9:02:48:c7 (ECDSA)
+|_ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAQ/sMGFMcLOXGm4OHMewoI0/llfAiwLbBVOmzo2h3LvXLxUH0s7dFMp+v+IjH9JRkmXmTmA1bMMDMA+qtsHKM4=
+80/tcp   open  http    syn-ack Werkzeug httpd 0.8.3 (Python 2.7.6)
+|_http-methods: HEAD OPTIONS GET
+|_http-title: netcat.us
+9000/tcp open  echo    syn-ack
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at http://www.insecure.org/cgi-bin/servicefp-submit.cgi :
+SF-Port22-TCP:V=6.40%I=7%D=10/2%Time=57F177AC%P=x86_64-pc-linux-gnu%r(NULL
+SF:,2B,"SSH-2\.0-OpenSSH_6\.6\.1p1\x20Ubuntu-2ubuntu2\.8\r\n");
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 21:10
+Completed NSE at 21:10, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 47.89 seconds
+           Raw packets sent: 65593 (2.886MB) | Rcvd: 131189 (5.510MB)
