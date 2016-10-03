@@ -22,7 +22,11 @@ def index():
 	
 	return render_template('starter-template.html')
     
-
+@app.route("/about")
+def about():
+	
+	return render_template('about.html')
+    
                            
 
 @app.route('/search', methods=['POST'])
@@ -62,7 +66,8 @@ def project(secretkey):
     if os.path.exists('/root/redcloud/files/'+ project.folder +'/ports/index.txt'):
         ports = open('/root/redcloud/files/'+ project.folder +'/ports/index.txt').read()
         match = re.findall('([0-9]{1,4}\/(?:tcp|udp)\s+(?:open|closed|filtered).*)', ports)
-        ServiceParse = '\n\n'.join(match)
+        banner = re.findall('banner:(.*)', ports)
+        ServiceParse = '\n\n'.join(match) + '\n\n' + '\n\n'.join(banner)
     else:
         print ("File not found: " + ports)
         

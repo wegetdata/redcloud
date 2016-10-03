@@ -1,6 +1,14 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
+      <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+      
+      <link rel="stylesheet" href="http://callmenick.com/theme/callmenick2/css/style.min.css">
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js"></script>
+</head>
 <style>
 body {
   margin: 0;
@@ -20,23 +28,31 @@ video {
   background-size: cover;
   transition: 1s opacity;
 }
+.boxed {
+  border: 1px solid green ;
+}
+
 
 #polina { 
   font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+  font-size: 22px;
   font-weight:100; 
   background: rgba(0,0,0,0.3);
   color: white;
   padding: 2rem;
-  width: 33%;
-  margin:2rem;
-  float: right;
-  font-size: 1.2rem;
+  float: left;
+  width: 50%;
+  position: relative;
+  left: 25%;
 }
 
 .stopfade { 
    opacity: .5;
 }
 
+#polina button:hover { 
+   background: rgba(0,0,0,0.5);
+}
 
 .projectsearch {
 
@@ -97,10 +113,7 @@ video {
     <![endif]-->
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="../static/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../static/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../static/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../static/ico/apple-touch-icon-57-precomposed.png">
+ 
   </head>
 
   <body>
@@ -126,27 +139,29 @@ video {
     </div>
     </nav>
     
-    
+<div id="polina">
+<h1>About</h1>
 
-    <div class="projectsearch">
-<center>
-      <h1></h1><h1></h1><h1></h1><h1></h1><h1></h1>
-<!--<img src="../static/netcat.gif" height="200" width="400"/> -->
-
-    <form  action="/search" method="post" role="form">
+<p>
+    Netcat.us is an independent, open source, penetration testing information aggregator designed to utilize native Linux tools and networking capabilities to help red teams simplify the amount of data they need to process during engagements. Netcat.us utilizes Python, SQL, and HTML/CSS to provide instant visual categorization and feedback on data sent to it through the simple command line tool known as netcat.
+</p><br>
+<h3>Usage</h3>
+<p></p>
+<p>
     
-    <div class="form-group">
-      
-      <input type="text" class="searchbar" id="name" name="name" placeholder="Secret Key.."><br>
-      <button type="submit" class="btn btn-success">Search</button>
-  </form> </div>
-             
-            </div>
-            </center>
-        </div>
-  </div>
+<code class=" language-html"><i class="fa fa-code pre-icon"></i> echo secretkey/directory/ | cat - nmap.txt | nc netcat.us 9000</code>
+<p></p>
+<code class=" language-html"> 
+Current Avaliable Directories:
+
+<li>target</li>
+<li>ports</li>
+<li>directory</li>
+<li>services</li>
+</code>
+
+
 </div>
-
 
  <!-- Display flashed messages -->
       {% with msgs = get_flashed_messages() %}
