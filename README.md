@@ -1,5 +1,5 @@
 
-[Alt text](https://raw.githubusercontent.com/wegetdata/redcloud/master/Netcat-Logo-black-500x250px.gif "")
+![Alt text](https://raw.githubusercontent.com/wegetdata/redcloud/master/Netcat-Logo-black-500x250px.gif "")
 
 ## Install ##
 
@@ -43,4 +43,4 @@ backdoors
 ## ScreenShot ##
 
 
-[Alt text](http://imgur.com/1bee4772-9133-4a3e-ad99-ac4c9c08918c " ")
+![Alt text](http://imgur.com/1bee4772-9133-4a3e-ad99-ac4c9c08918c " ")
